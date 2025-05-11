@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rome History Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Rome: Ruler of the Mediterranean - Quiz</h1>
+
+        <div id="question-area" class="question-area">
+            <h2 id="question-number"></h2>
+            <p id="question-text"></p>
+            <div id="options-container" class="options-container">
+                <!-- Options will be dynamically inserted here -->
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-btn" onclick="prevQuestion()" disabled>Previous</button>
+                <button id="next-btn" onclick="nextQuestion()">Next</button>
+                <button id="submit-btn" onclick="submitQuiz()" style="display:none;">Submit Quiz</button>
+            </div>
+        </div>
+
+        <div id="results-area" class="results-area" style="display:none;">
+            <h2>Quiz Results</h2>
+            <p id="score"></p>
+            <div id="review-container">
+                <h3>Review Your Answers:</h3>
+                <!-- Review will be dynamically inserted here -->
+            </div>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="Questions.js"></script>
+    <script src="QuestionsManager.js"></script>
+</body>
+</html>
